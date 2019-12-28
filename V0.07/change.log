@@ -1,0 +1,18 @@
+PyHRV
+
+0.05
+- R pick detection instead of threshold cross detection
+- "Open existing" feature added
+- "serial data text browser" disabled
+- stability improvements
+
+V0.06
+- Basic Analyzer added
+- Start monitor again, fixed
+- added choice for ecg data addition
+
+V0.07
+- New  R detection method  added
+
+
+

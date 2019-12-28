@@ -1,0 +1,115 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file '.\serial.ui'
+#
+# Created by: PyQt5 UI code generator 5.13.1
+#
+# WARNING! All changes made in this file will be lost!
+
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(1373, 822)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.labelTrsh = QtWidgets.QLabel(self.centralwidget)
+        self.labelTrsh.setGeometry(QtCore.QRect(960, 10, 131, 21))
+        self.labelTrsh.setText("")
+        self.labelTrsh.setObjectName("labelTrsh")
+        self.lotwidget = PlotWidget(self.centralwidget)
+        self.lotwidget.setGeometry(QtCore.QRect(90, 120, 1161, 651))
+        self.lotwidget.setObjectName("lotwidget")
+        self.gridLayout = QtWidgets.QGridLayout(self.lotwidget)
+        self.gridLayout.setSizeConstraint(QtWidgets.QLayout.SetMaximumSize)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_2 = QtWidgets.QLabel(self.lotwidget)
+        self.label_2.setObjectName("label_2")
+        self.gridLayout.addWidget(self.label_2, 4, 6, 1, 1)
+        self.textBrowser = QtWidgets.QTextBrowser(self.lotwidget)
+        self.textBrowser.setMinimumSize(QtCore.QSize(0, 192))
+        self.textBrowser.setMaximumSize(QtCore.QSize(256, 549))
+        self.textBrowser.setObjectName("textBrowser")
+        self.gridLayout.addWidget(self.textBrowser, 0, 2, 3, 3)
+        self.pushButtonStartM = QtWidgets.QPushButton(self.lotwidget)
+        self.pushButtonStartM.setMaximumSize(QtCore.QSize(93, 16777215))
+        self.pushButtonStartM.setObjectName("pushButtonStartM")
+        self.gridLayout.addWidget(self.pushButtonStartM, 4, 4, 1, 1)
+        self.pushButtonClear = QtWidgets.QPushButton(self.lotwidget)
+        self.pushButtonClear.setMaximumSize(QtCore.QSize(93, 16777215))
+        self.pushButtonClear.setObjectName("pushButtonClear")
+        self.gridLayout.addWidget(self.pushButtonClear, 3, 4, 1, 1)
+        self.spinBoxFps = QtWidgets.QSpinBox(self.lotwidget)
+        self.spinBoxFps.setMinimum(1)
+        self.spinBoxFps.setMaximum(30)
+        self.spinBoxFps.setObjectName("spinBoxFps")
+        self.gridLayout.addWidget(self.spinBoxFps, 4, 7, 1, 1)
+        self.pushButtonGraph = QtWidgets.QPushButton(self.lotwidget)
+        self.pushButtonGraph.setObjectName("pushButtonGraph")
+        self.gridLayout.addWidget(self.pushButtonGraph, 4, 5, 1, 1)
+        self.pushButtonRefeshPorts = QtWidgets.QPushButton(self.lotwidget)
+        self.pushButtonRefeshPorts.setMaximumSize(QtCore.QSize(93, 16777215))
+        self.pushButtonRefeshPorts.setObjectName("pushButtonRefeshPorts")
+        self.gridLayout.addWidget(self.pushButtonRefeshPorts, 3, 3, 1, 1)
+        self.horizontalSliderZoom = QtWidgets.QSlider(self.lotwidget)
+        self.horizontalSliderZoom.setMinimum(-1000)
+        self.horizontalSliderZoom.setMaximum(-50)
+        self.horizontalSliderZoom.setOrientation(QtCore.Qt.Horizontal)
+        self.horizontalSliderZoom.setObjectName("horizontalSliderZoom")
+        self.gridLayout.addWidget(self.horizontalSliderZoom, 2, 6, 1, 1)
+        self.pushButtonStopM = QtWidgets.QPushButton(self.lotwidget)
+        self.pushButtonStopM.setMaximumSize(QtCore.QSize(93, 16777215))
+        self.pushButtonStopM.setObjectName("pushButtonStopM")
+        self.gridLayout.addWidget(self.pushButtonStopM, 4, 3, 1, 1, QtCore.Qt.AlignHCenter)
+        self.label = QtWidgets.QLabel(self.lotwidget)
+        self.label.setMaximumSize(QtCore.QSize(92, 16777215))
+        self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 3, 2, 1, 1)
+        self.comboBoxPorts = QtWidgets.QComboBox(self.lotwidget)
+        self.comboBoxPorts.setMaximumSize(QtCore.QSize(73, 16777215))
+        self.comboBoxPorts.setObjectName("comboBoxPorts")
+        self.gridLayout.addWidget(self.comboBoxPorts, 4, 2, 1, 1, QtCore.Qt.AlignHCenter)
+        self.verticalSliderTrsh = QtWidgets.QSlider(self.lotwidget)
+        self.verticalSliderTrsh.setMaximum(700)
+        self.verticalSliderTrsh.setOrientation(QtCore.Qt.Vertical)
+        self.verticalSliderTrsh.setObjectName("verticalSliderTrsh")
+        self.gridLayout.addWidget(self.verticalSliderTrsh, 0, 7, 1, 1)
+        self.widget = PlotWidget(self.lotwidget)
+        self.widget.setObjectName("widget")
+        self.gridLayout.addWidget(self.widget, 0, 6, 2, 1)
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1373, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label_2.setText(_translate("MainWindow", "FPS"))
+        self.pushButtonStartM.setText(_translate("MainWindow", "Start Monitor"))
+        self.pushButtonClear.setText(_translate("MainWindow", "Clear"))
+        self.pushButtonGraph.setText(_translate("MainWindow", "Graph"))
+        self.pushButtonRefeshPorts.setText(_translate("MainWindow", "Refresh"))
+        self.pushButtonStopM.setText(_translate("MainWindow", "Stop Monitor"))
+        self.label.setText(_translate("MainWindow", "Select Com Port"))
+from pyqtgraph import PlotWidget
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
